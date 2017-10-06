@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="verifyOTP(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="OTP">OTP</label>
+          <input
+            type="text"
+            id="OTP"
+            name="otp"
+            ngModel
+            class="form-control">
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Verify OTP</button>
+      </form>
+    </div>
+  </div>
+  
+  

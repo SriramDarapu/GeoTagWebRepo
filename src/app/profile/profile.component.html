@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="business_name"
+          [(ngModel)] = "data.name"
+          class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="phone">Mobile</label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          [(ngModel)]="data.phone"
+          class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="email">Mail</label>
+        <input type="email" id="email" name="email" [(ngModel)]="data.email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="businessCategory">Business Category</label>
+        <select class="form-control" id="businessCategory" name="business_ctgry" [(ngModel)]="data.business_ctgry">
+          <option>-- Choose Business Category --</option>
+          <option>Hotel</option>
+          <option>Fashion</option>
+          <option>Movies</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          [(ngModel)]="data.location"
+          class="form-control">
+      </div>
+      <div class="form-group">
+          <label for="range">Range</label>
+          <select class="form-control" id="range" name="range" [(ngModel)]="data.range">
+              <option>-- Choose Range --</option>
+            <option>2KM</option>
+            <option>3KM</option>
+            <option>5KM</option>
+          </select>
+        </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>
+    </form>
+  </div>
+</div>
+
+  
